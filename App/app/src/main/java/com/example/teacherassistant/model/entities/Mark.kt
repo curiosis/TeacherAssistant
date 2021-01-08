@@ -9,7 +9,6 @@ import androidx.room.*
         childColumns = ["studentCourseId"],
         onDelete = ForeignKey.CASCADE)
 ])
-//@TypeConverter(Converters::class)
 data class Mark(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
