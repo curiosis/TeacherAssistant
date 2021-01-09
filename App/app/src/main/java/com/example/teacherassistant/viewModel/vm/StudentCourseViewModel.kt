@@ -38,7 +38,7 @@ class StudentCourseViewModel(application: Application):AndroidViewModel(applicat
     var studentsFromCurrentCourse : LiveData<List<Student>>? = null
     var studentsNotFromCurrentCourse : LiveData<List<Student>>? = null
 
-    fun setStudentsFCC(course: Course){
+    fun setStudentsFCC(course: Course?){
         if(course != null){
             studentsFromCurrentCourse = studentCourseRepo.getStudentsFromCourse((course.id))
         }
