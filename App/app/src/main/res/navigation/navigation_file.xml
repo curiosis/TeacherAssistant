@@ -21,7 +21,11 @@
     <fragment
         android:id="@+id/studentsFragment"
         android:name="com.example.teacherassistant.view.fragments.StudentsFragment"
-        android:label="StudentsFragment" />
+        android:label="StudentsFragment" >
+        <action
+            android:id="@+id/action_studentsFragment_to_addStudentFragment"
+            app:destination="@id/addStudentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/coursesFragment"
         android:name="com.example.teacherassistant.view.fragments.CoursesFragment"
@@ -30,4 +34,8 @@
         android:id="@+id/reportFragment"
         android:name="com.example.teacherassistant.view.fragments.ReportFragment"
         android:label="ReportFragment" />
+    <fragment
+        android:id="@+id/addStudentFragment"
+        android:name="com.example.teacherassistant.view.updateDatabase.AddStudentFragment"
+        android:label="AddStudentFragment" />
 </navigation>
