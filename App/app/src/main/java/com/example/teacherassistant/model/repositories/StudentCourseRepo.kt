@@ -15,5 +15,5 @@ class StudentCourseRepo(private val studentCourseDao: StudentCourseDao) {
     fun getCoursesOutOfStudent(studentId : Int) = studentCourseDao.getAllCoursesOutOfStudent(studentId)
 
     suspend fun add(studentCourse : StudentCourse) = studentCourseDao.insertStudentCourse(studentCourse)
-    suspend fun delete(courseId : Int, studentID : Int) = studentCourseDao.deleteStudentCourse(courseId, studentID)
+    suspend fun delete(studentId : Int, courseID : Int) = studentCourseDao.deleteStudentCourse(studentId, courseID)
 }

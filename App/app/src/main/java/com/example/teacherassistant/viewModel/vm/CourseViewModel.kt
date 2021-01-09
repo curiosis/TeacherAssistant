@@ -12,7 +12,7 @@ import com.example.teacherassistant.model.repositories.StudentRepo
 import kotlinx.coroutines.launch
 
 class CourseViewModel(application: Application): AndroidViewModel(application) {
-    var currentCourse : Course? = null
+    private var currentCourse : Course? = null
     private val courseRepo: CourseRepo = CourseRepo((projectDatabase.getDatabase(application).courseDao()))
     val courses: LiveData<List<Course>> = courseRepo.getAll
 
@@ -35,7 +35,7 @@ class CourseViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
-    @JvmName("setCurrentStudent1")
+    @JvmName("setCurrentCourse1")
     fun setCurrentCourse(course: Course?){
         currentCourse = course
     }
