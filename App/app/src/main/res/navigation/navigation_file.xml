@@ -25,11 +25,21 @@
         <action
             android:id="@+id/action_studentsFragment_to_addStudentFragment"
             app:destination="@id/addStudentFragment" />
+        <action
+            android:id="@+id/action_studentsFragment_to_courseStudentFragment"
+            app:destination="@id/courseStudentFragment" />
     </fragment>
     <fragment
         android:id="@+id/coursesFragment"
         android:name="com.example.teacherassistant.view.fragments.CoursesFragment"
-        android:label="CoursesFragment" />
+        android:label="CoursesFragment" >
+        <action
+            android:id="@+id/action_coursesFragment_to_addCourseFragment"
+            app:destination="@id/addCourseFragment" />
+        <action
+            android:id="@+id/action_coursesFragment_to_studentsCourseFragment"
+            app:destination="@id/studentsCourseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reportFragment"
         android:name="com.example.teacherassistant.view.fragments.ReportFragment"
@@ -38,4 +48,44 @@
         android:id="@+id/addStudentFragment"
         android:name="com.example.teacherassistant.view.updateDatabase.AddStudentFragment"
         android:label="AddStudentFragment" />
+    <fragment
+        android:id="@+id/addCourseFragment"
+        android:name="com.example.teacherassistant.view.updateDatabase.AddCourseFragment"
+        android:label="AddCourseFragment" />
+    <fragment
+        android:id="@+id/marksFragment"
+        android:name="com.example.teacherassistant.view.fragments.MarksFragment"
+        android:label="MarksFragment" >
+        <action
+            android:id="@+id/action_marksFragment_to_addMarkFragment"
+            app:destination="@id/addMarkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMarkFragment"
+        android:name="com.example.teacherassistant.view.updateDatabase.AddMarkFragment"
+        android:label="AddMarkFragment" />
+    <fragment
+        android:id="@+id/addSCFragment"
+        android:name="com.example.teacherassistant.view.updateDatabase.AddSCFragment"
+        android:label="AddSCFragment" />
+    <fragment
+        android:id="@+id/addCSFragment"
+        android:name="com.example.teacherassistant.view.updateDatabase.AddCSFragment"
+        android:label="AddCSFragment" />
+    <fragment
+        android:id="@+id/courseStudentFragment"
+        android:name="com.example.teacherassistant.view.conn.CourseStudentFragment"
+        android:label="CourseStudentFragment" >
+        <action
+            android:id="@+id/action_courseStudentFragment_to_marksFragment2"
+            app:destination="@id/marksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsCourseFragment"
+        android:name="com.example.teacherassistant.view.conn.StudentsCourseFragment"
+        android:label="StudentsCourseFragment" >
+        <action
+            android:id="@+id/action_studentsCourseFragment_to_marksFragment2"
+            app:destination="@id/marksFragment" />
+    </fragment>
 </navigation>

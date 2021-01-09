@@ -1,4 +1,6 @@
 package com.example.teacherassistant.view.updateDatabase
 
-class AddCSFragment {
+import androidx.fragment.app.Fragment
+
+class AddCSFragment : Fragment() {
 }

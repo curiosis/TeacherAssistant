@@ -1,4 +1,6 @@
 package com.example.teacherassistant.view.conn
 
-class StudentsCourseFragment {
+import androidx.fragment.app.Fragment
+
+class StudentsCourseFragment : Fragment() {
 }

@@ -47,7 +47,11 @@ class StudentListAdapter(
         val elementButton = holder.view.findViewById<Button>(R.id.itemBtn)
         elementButton.text = "${students.value?.get(position)?.name} ${students.value?.get(position)?.surname}"
         elementButton.setOnClickListener {
-            view->view.findNavController().navigate(R.id.)
+            view->view.findNavController().navigate(R.id.action_studentsFragment_to_courseStudentFragment)
+            val thisElement = students.value?.get(position)
+            if(thisElement != null){
+                currentStudentCh(thisElement)
+            }
         }
 
 

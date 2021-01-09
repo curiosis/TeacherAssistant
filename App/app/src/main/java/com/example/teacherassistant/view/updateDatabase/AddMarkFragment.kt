@@ -1,4 +1,6 @@
 package com.example.teacherassistant.view.updateDatabase
 
-class AddMarkFragment {
+import androidx.fragment.app.Fragment
+
+class AddMarkFragment : Fragment() {
 }
