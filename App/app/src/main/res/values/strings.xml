@@ -15,4 +15,9 @@
     <string name="courseName">Name of the course:</string>
     <string name="addCourse">Add Course</string>
 
+    <!-- Add mark -->
+    <string name="markName">Mark:</string>
+    <string name="markNote">Note:</string>
+    <string name="addMark">Add Mark</string>
+
 </resources>
