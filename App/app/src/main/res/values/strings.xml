@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">TeacherAssistant</string>
+
+    <!-- Main Menu -->
+    <string name="students">Students</string>
+    <string name="courses">Courses</string>
+    <string name="report">Todays Marks</string>
+
+    <!-- Add student -->
+    <string name="name">Name:</string>
+    <string name="surname">Surname:</string>
+    <string name="addStudent">Add Student</string>
+
+    <!-- Add course -->
+    <string name="courseName">Name of the course:</string>
+    <string name="addCourse">Add Course</string>
+
 </resources>
