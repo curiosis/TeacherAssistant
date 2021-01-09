@@ -10,7 +10,7 @@ import com.example.teacherassistant.model.repositories.StudentRepo
 import kotlinx.coroutines.launch
 
 class StudentViewModel(application: Application): AndroidViewModel(application) {
-    private var currentStudent : Student? = null
+    var currentStudent : Student? = null
     private val studentRepo: StudentRepo = StudentRepo((projectDatabase.getDatabase(application).studentDao()))
     val students: LiveData<List<Student>> = studentRepo.getAll
 
