@@ -13,7 +13,7 @@ import com.example.teacherassistant.R
 
 class StudentListAdapter(
     var students : LiveData<List<Student>>,
-    var onClickDelete: (student: Student) -> Unit,
+    var deleteButton: (student: Student) -> Unit,
     var currentStudentCh: (student: Student) -> Unit) :
         RecyclerView.Adapter<StudentListAdapter.StudentHolder>() {
 
@@ -41,7 +41,7 @@ class StudentListAdapter(
         delButton.setOnClickListener {
             val thisElement = students.value?.get(position)
             if(thisElement != null){
-                onClickDelete(thisElement)
+                deleteButton(thisElement)
             }
         }
 

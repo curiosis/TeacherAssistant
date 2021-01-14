@@ -13,7 +13,7 @@ import com.example.teacherassistant.model.entities.Course
 
 class CourseListAdapter(
     var courses: LiveData<List<Course>>,
-    val onClickDelete: (course: Course) -> Unit,
+    val deleteButton: (course: Course) -> Unit,
     val currentCourseCh: (course: Course) -> Unit):
         RecyclerView.Adapter<CourseListAdapter.CourseHolder>(){
 
@@ -22,7 +22,7 @@ class CourseListAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseListAdapter.CourseHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.one_course_row, parent, false) as View
-        return CourseListAdapter.CourseHolder(view)
+        return CourseHolder(view)
     }
 
     override fun onBindViewHolder(holder: CourseListAdapter.CourseHolder, position: Int) {
@@ -41,7 +41,7 @@ class CourseListAdapter(
         delButton.setOnClickListener {
             val thisElement = courses.value?.get(position)
             if(thisElement != null){
-                onClickDelete(thisElement)
+                deleteButton(thisElement)
             }
         }
 
