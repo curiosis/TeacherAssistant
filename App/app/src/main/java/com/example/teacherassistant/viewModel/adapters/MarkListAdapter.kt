@@ -11,9 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.teacherassistant.R
 import com.example.teacherassistant.model.entities.Mark
 
-class MarkListAdapter(var marks: LiveData<List<Mark>>?,
-                      val deleteButton: (mark: Mark) -> Unit,
-                      val currentMarkCh: (mark: Mark) -> Unit):
+class MarkListAdapter(
+        var marks: LiveData<List<Mark>>?,
+        val deleteButton: (mark: Mark) -> Unit,
+        val currentMarkCh: (mark: Mark) -> Unit):
         RecyclerView.Adapter<MarkListAdapter.MarkHolder>() {
 
     class MarkHolder(val view: View): RecyclerView.ViewHolder(view)

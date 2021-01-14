@@ -12,9 +12,9 @@ import com.example.teacherassistant.R
 import com.example.teacherassistant.model.entities.Course
 
 class CourseListAdapter(
-    var courses: LiveData<List<Course>>,
-    val deleteButton: (course: Course) -> Unit,
-    val currentCourseCh: (course: Course) -> Unit):
+        var courses: LiveData<List<Course>>,
+        val deleteButton: (course: Course) -> Unit,
+        val currentCourseCh: (course: Course) -> Unit):
         RecyclerView.Adapter<CourseListAdapter.CourseHolder>(){
 
     class CourseHolder(val view: View): RecyclerView.ViewHolder(view)
@@ -28,36 +28,35 @@ class CourseListAdapter(
     override fun onBindViewHolder(holder: CourseListAdapter.CourseHolder, position: Int) {
 
         val editButton = holder.view.findViewById<Button>(R.id.crsEdit)
+        val delButton = holder.view.findViewById<Button>(R.id.crsDel)
+        val crsStudent = holder.view.findViewById<Button>(R.id.crsStudentsBtn)
+        val courseName = holder.view.findViewById<TextView>(R.id.crsNameTV)
+
+        courseName.text = courses.value?.get(position)?.name
+
         editButton.setOnClickListener {
                 view->view.findNavController().navigate(
             R.id.action_coursesFragment_to_addCourseFragment)
-            val thisElement = courses.value?.get(position)
-            if(thisElement != null){
-                currentCourseCh(thisElement)
+            val thisCourse = courses.value?.get(position)
+            if(thisCourse != null){
+                currentCourseCh(thisCourse)
             }
         }
 
-        val delButton = holder.view.findViewById<Button>(R.id.crsDel)
         delButton.setOnClickListener {
-            val thisElement = courses.value?.get(position)
-            if(thisElement != null){
-                deleteButton(thisElement)
+            val thisCourse = courses.value?.get(position)
+            if(thisCourse != null){
+                deleteButton(thisCourse)
             }
         }
 
-        val elementButton = holder.view.findViewById<Button>(R.id.crsStudentsBtn)
-        elementButton.setOnClickListener {
+        crsStudent.setOnClickListener {
                 view->view.findNavController().navigate(R.id.action_coursesFragment_to_studentsCourseFragment)
-            val thisElement = courses.value?.get(position)
-            if(thisElement != null){
-                currentCourseCh(thisElement)
+            val thisCourse = courses.value?.get(position)
+            if(thisCourse != null){
+                currentCourseCh(thisCourse)
             }
         }
-
-        val courseName = holder.view.findViewById<TextView>(R.id.crsNameTV)
-        courseName.text = courses.value?.get(position)?.name
-
-
     }
 
     override fun getItemCount(): Int = courses.value?.size ?: 0
