@@ -41,6 +41,12 @@ class StudentsCourseAdapter(
             if(thisStudent != null)
                 currentStudentCh(thisStudent)
         }
+
+        delButton.setOnClickListener {
+            val thisStudent = students.value?.get(position)
+            if(thisStudent != null)
+                deleteButton(thisStudent)
+        }
     }
 
     override fun getItemCount(): Int = students.value?.size ?: 0
