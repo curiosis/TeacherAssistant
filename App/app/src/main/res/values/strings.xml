@@ -24,4 +24,7 @@
     <string name="edit">Edit</string>
     <string name="delete">Del</string>
 
+    <!-- Marks -->
+    <string name="marks">Marks</string>
+
 </resources>
