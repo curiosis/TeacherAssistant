@@ -26,12 +26,6 @@ class StudentsCourseFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        layoutManager = LinearLayoutManager(context)
-        studentViewModel = ViewModelProvider(requireActivity()).get(StudentViewModel::class.java)
-        courseViewModel = ViewModelProvider(requireActivity()).get(CourseViewModel::class.java)
-        studentCourseViewModel = ViewModelProvider(requireActivity()).get(StudentCourseViewModel::class.java)
-        studentCourseViewModel.setStudentsFCC(courseViewModel.currentCourse)
 
-        adapter = StudentsCourseAdapter()
     }
 }

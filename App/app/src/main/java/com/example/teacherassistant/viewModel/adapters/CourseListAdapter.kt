@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -20,13 +21,13 @@ class CourseListAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseListAdapter.CourseHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.one_item_row, parent, false) as View
+            .inflate(R.layout.one_course_row, parent, false) as View
         return CourseListAdapter.CourseHolder(view)
     }
 
     override fun onBindViewHolder(holder: CourseListAdapter.CourseHolder, position: Int) {
 
-        val editButton = holder.view.findViewById<Button>(R.id.editBtn)
+        val editButton = holder.view.findViewById<Button>(R.id.crsEdit)
         editButton.setOnClickListener {
                 view->view.findNavController().navigate(
             R.id.action_coursesFragment_to_addCourseFragment)
@@ -36,7 +37,7 @@ class CourseListAdapter(
             }
         }
 
-        val delButton = holder.view.findViewById<Button>(R.id.delBtn)
+        val delButton = holder.view.findViewById<Button>(R.id.crsDel)
         delButton.setOnClickListener {
             val thisElement = courses.value?.get(position)
             if(thisElement != null){
@@ -44,8 +45,7 @@ class CourseListAdapter(
             }
         }
 
-        val elementButton = holder.view.findViewById<Button>(R.id.itemBtn)
-        elementButton.text = courses.value?.get(position)?.name
+        val elementButton = holder.view.findViewById<Button>(R.id.crsStudentsBtn)
         elementButton.setOnClickListener {
                 view->view.findNavController().navigate(R.id.action_coursesFragment_to_studentsCourseFragment)
             val thisElement = courses.value?.get(position)
@@ -53,6 +53,9 @@ class CourseListAdapter(
                 currentCourseCh(thisElement)
             }
         }
+
+        val courseName = holder.view.findViewById<TextView>(R.id.crsNameTV)
+        courseName.text = courses.value?.get(position)?.name
 
 
     }
