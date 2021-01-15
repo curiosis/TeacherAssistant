@@ -4,14 +4,21 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/courseTv"
+        android:id="@+id/studentSurnameTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:textColor="#000000" />
 
     <TextView
-        android:id="@+id/studentTv"
+        android:id="@+id/studentNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/courseTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -23,4 +30,5 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="#000000" />
+
 </LinearLayout>
