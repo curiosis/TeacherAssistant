@@ -2,6 +2,7 @@ package com.example.teacherassistant.viewModel.vm
 
 import android.app.Application
 import androidx.lifecycle.*
+import com.example.teacherassistant.model.MarkEnum
 import com.example.teacherassistant.model.entities.Mark
 import com.example.teacherassistant.model.entities.StudentCourse
 import com.example.teacherassistant.model.projectDatabase
@@ -9,13 +10,13 @@ import com.example.teacherassistant.model.repositories.MarkRepo
 import kotlinx.coroutines.launch
 
 class MarkViewModel(application: Application): AndroidViewModel(application) {
-    private var currentMark :Mark? = null
+    var currentMark :Mark? = null
     private val database = projectDatabase.getDatabase(application)
     private val markRepo : MarkRepo = MarkRepo(database.markDao())
     val marksByToday: LiveData<List<Mark>> = markRepo.getAllMarksByToday
 
     fun addMark(studentCourseId: Int,
-                mark: Float,
+                mark: MarkEnum,
                 note: String,
                 date: String
     ){
@@ -27,7 +28,7 @@ class MarkViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun editMark(studentCourseId: Int,
-                 mark: Float,
+                 mark: MarkEnum,
                  note: String,
                  date: String
     ){

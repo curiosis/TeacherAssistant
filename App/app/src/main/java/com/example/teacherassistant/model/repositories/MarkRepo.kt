@@ -3,9 +3,7 @@ package com.example.teacherassistant.model.repositories
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import com.example.teacherassistant.model.dao.MarkDao
-import com.example.teacherassistant.model.entities.Course
 import com.example.teacherassistant.model.entities.Mark
-import com.example.teacherassistant.model.entities.StudentCourse
 import java.text.SimpleDateFormat
 import java.util.*
 
