@@ -19,11 +19,11 @@ class AddStudentFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProvider(requireActivity()).get(StudentViewModel::class.java)
-        return inflater.inflate(
-            R.layout.add_student_layout,
-            container,
-            false)
+
+        viewModel = ViewModelProvider(requireActivity())
+                .get(StudentViewModel::class.java)
+
+        return inflater.inflate(R.layout.add_student_layout, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,8 +43,9 @@ class AddStudentFragment: Fragment() {
         else{
             addBtn.setOnClickListener{
                 if(!nameInput.text.isNullOrEmpty() && !surnameInput.text.isNullOrEmpty())
-                    viewModel.insert(nameInput.text.toString(),
-                        surnameInput.text.toString())
+                    viewModel.insert(
+                            nameInput.text.toString(),
+                            surnameInput.text.toString())
                 activity?.onBackPressed()
             }
         }

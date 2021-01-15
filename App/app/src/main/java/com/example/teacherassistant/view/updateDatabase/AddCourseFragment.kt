@@ -19,11 +19,11 @@ class AddCourseFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProvider(requireActivity()).get(CourseViewModel::class.java)
-        return inflater.inflate(
-            R.layout.add_course_layout,
-            container,
-            false)
+
+        viewModel = ViewModelProvider(requireActivity())
+                .get(CourseViewModel::class.java)
+
+        return inflater.inflate(R.layout.add_course_layout, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
