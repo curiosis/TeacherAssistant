@@ -79,6 +79,9 @@
         <action
             android:id="@+id/action_courseStudentFragment_to_marksFragment2"
             app:destination="@id/marksFragment" />
+        <action
+            android:id="@+id/action_courseStudentFragment_to_addCSFragment"
+            app:destination="@id/addCSFragment" />
     </fragment>
     <fragment
         android:id="@+id/studentsCourseFragment"
@@ -87,5 +90,8 @@
         <action
             android:id="@+id/action_studentsCourseFragment_to_marksFragment2"
             app:destination="@id/marksFragment" />
+        <action
+            android:id="@+id/action_studentsCourseFragment_to_addSCFragment"
+            app:destination="@id/addSCFragment" />
     </fragment>
 </navigation>
