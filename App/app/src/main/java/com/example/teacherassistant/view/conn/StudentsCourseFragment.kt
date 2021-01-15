@@ -18,19 +18,19 @@ import kotlinx.android.synthetic.main.students_course_fragment_layout.*
 
 class StudentsCourseFragment : Fragment() {
 
-    lateinit var recyclerView: RecyclerView
-    lateinit var myLayoutManager : RecyclerView.LayoutManager
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var myLayoutManager : RecyclerView.LayoutManager
 
-    lateinit var myAdapter : StudentsCourseAdapter
+    private lateinit var myAdapter : StudentsCourseAdapter
 
-    lateinit var studentViewModel : StudentViewModel
-    lateinit var courseViewModel: CourseViewModel
-    lateinit var studentCourseViewModel: StudentCourseViewModel
+    private lateinit var studentViewModel : StudentViewModel
+    private lateinit var courseViewModel: CourseViewModel
+    private lateinit var studentCourseViewModel: StudentCourseViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         myLayoutManager = LinearLayoutManager(context)
 
@@ -62,6 +62,8 @@ class StudentsCourseFragment : Fragment() {
                 viewLifecycleOwner,{
                     myAdapter.notifyDataSetChanged()
         })
+
+        studentViewModel.setCurrentStudent(null)
 
         return inflater.inflate(R.layout.students_course_fragment_layout, container, false)
     }
