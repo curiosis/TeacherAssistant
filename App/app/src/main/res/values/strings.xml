@@ -26,5 +26,7 @@
 
     <!-- Marks -->
     <string name="marks">Marks</string>
+    <string name="student">Student</string>
+    <string name="course">Course</string>
 
 </resources>

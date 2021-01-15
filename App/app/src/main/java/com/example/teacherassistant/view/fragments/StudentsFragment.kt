@@ -22,9 +22,15 @@ class StudentsFragment : Fragment() {
     private lateinit var myAdapter: StudentListAdapter
     private lateinit var viewModel: StudentViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?):
+            View? {
+
         myLayoutManager = LinearLayoutManager(context)
-        viewModel = ViewModelProvider(requireActivity()).get(StudentViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity())
+                .get(StudentViewModel::class.java)
 
         myAdapter = StudentListAdapter(
                 viewModel.students,
