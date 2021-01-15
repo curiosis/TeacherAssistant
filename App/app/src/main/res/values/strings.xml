@@ -29,4 +29,15 @@
     <string name="student">Student</string>
     <string name="course">Course</string>
 
+    <!-- Marks array -->
+    <string-array name="marks_array">
+        <item>Bdb</item>
+        <item>DbPlus</item>
+        <item>Db</item>
+        <item>DstPlus</item>
+        <item>Dst</item>
+        <item>Ndst</item>
+    </string-array>
+
+
 </resources>
