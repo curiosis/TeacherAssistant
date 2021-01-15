@@ -44,7 +44,7 @@ class StudentCourseViewModel(application: Application):AndroidViewModel(applicat
         }
     }
 
-    fun setStudentsNFCC(course: Course){
+    fun setStudentsNFCC(course: Course?){
         if(course != null){
             studentsNotFromCurrentCourse = studentCourseRepo.getStudentsOutOfCourse(course.id)
         }
@@ -53,13 +53,13 @@ class StudentCourseViewModel(application: Application):AndroidViewModel(applicat
     var coursesFromCurrentStudent : LiveData<List<Course>>? = null
     var coursesNotFromCurrentStudent : LiveData<List<Course>>? = null
 
-    fun setCoursesFCS(student: Student){
+    fun setCoursesFCS(student: Student?){
         if(student != null){
             coursesFromCurrentStudent = studentCourseRepo.getCoursesFromStudent((student.id))
         }
     }
 
-    fun setCoursesNFCS(student: Student){
+    fun setCoursesNFCS(student: Student?){
         if(student != null){
             coursesNotFromCurrentStudent = studentCourseRepo.getCoursesOutOfStudent(student.id)
         }
