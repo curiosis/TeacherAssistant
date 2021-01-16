@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/stSurnameTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.65"
-        />
+        android:layout_weight="1.65" />
 
     <TextView
         android:id="@+id/stNameTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1.65"
-        />
+        android:layout_weight="1.65" />
 
     <Button
         android:id="@+id/stCoursesBtn"
@@ -31,8 +29,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/edit"
         android:backgroundTint="#4287f5"
+        android:text="@string/edit"
         tools:ignore="ButtonStyle" />
 
     <Button
@@ -40,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/delete"
         android:backgroundTint="#d44a4a"
+        android:text="@string/delete"
         tools:ignore="ButtonStyle" />
 </LinearLayout>
