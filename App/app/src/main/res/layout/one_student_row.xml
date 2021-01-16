@@ -7,14 +7,16 @@
     <TextView
         android:id="@+id/stSurnameTV"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.65" />
+        android:layout_height="match_parent"
+        android:layout_weight="1.65"
+        android:gravity="center"/>
 
     <TextView
         android:id="@+id/stNameTV"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.65" />
+        android:layout_height="match_parent"
+        android:layout_weight="1.65"
+        android:gravity="center" />
 
     <Button
         android:id="@+id/stCoursesBtn"
@@ -28,7 +30,7 @@
         android:id="@+id/stEdit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="1.2"
         android:backgroundTint="#4287f5"
         android:text="@string/edit"
         tools:ignore="ButtonStyle" />
