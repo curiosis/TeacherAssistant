@@ -20,9 +20,10 @@
     <string name="markNote">Note:</string>
     <string name="addMark">Add Mark</string>
 
-    <!-- Del/Ed -->
+    <!-- Del/Ed/Add -->
     <string name="edit">Edit</string>
     <string name="delete">Del</string>
+    <string name="add">Add</string>
 
     <!-- Marks -->
     <string name="marks">Marks</string>

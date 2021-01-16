@@ -16,6 +16,7 @@ import com.example.teacherassistant.viewModel.vm.CourseViewModel
 import com.example.teacherassistant.viewModel.vm.StudentCourseViewModel
 import com.example.teacherassistant.viewModel.vm.StudentViewModel
 import kotlinx.android.synthetic.main.courses_fragment_layout.*
+import kotlinx.android.synthetic.main.courses_student_fragment_layout.*
 import kotlinx.android.synthetic.main.students_course_fragment_layout.*
 
 class CourseStudentFragment : Fragment() {
@@ -73,12 +74,12 @@ class CourseStudentFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView = StsCrsRecyclerView.apply {
+        recyclerView = CrssStRecyclerView.apply {
             this.layoutManager = myLayoutManager
             this.adapter = myAdapter
         }
 
-        AddCrsBtn.setOnClickListener {
+        AddCrssStBtn.setOnClickListener {
             view.findNavController().navigate(
                     R.id.action_courseStudentFragment_to_addCSFragment
             )

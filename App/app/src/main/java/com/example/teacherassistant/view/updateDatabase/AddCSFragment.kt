@@ -64,7 +64,7 @@ class AddCSFragment : Fragment() {
             this.adapter = myAdapter
         }
     }
-    
+
     companion object{
         fun newInstance() = AddCSFragment()
     }

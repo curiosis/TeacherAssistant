@@ -49,7 +49,7 @@ class AddMarkFragment : Fragment() {
             }
         }
 
-        if(markViewModel != null){
+        if(markViewModel.currentMark != null){
 
             markSpinner.setSelection(
                     resources.getStringArray(

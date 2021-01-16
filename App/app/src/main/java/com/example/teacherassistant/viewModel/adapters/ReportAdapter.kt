@@ -58,7 +58,7 @@ class ReportAdapter(
 
         courseTView.text = currentCourse?.name
         studentSurnameTView.text = currentStudent?.surname
-        studentNameTView.text = currentStudent?.surname
+        studentNameTView.text = currentStudent?.name
         markTView.text = marks?.value?.get(position)?.mark.toString()
     }
 
