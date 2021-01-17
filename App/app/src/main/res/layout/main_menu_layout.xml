@@ -8,35 +8,55 @@
 
     <Button
         android:id="@+id/studentsBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/custom_button"
         android:text="@string/students"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/coursesBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="160dp"
+        android:background="@drawable/custom_button"
         android:text="@string/courses"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentsBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/studentsBtn"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/marksBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="160dp"
+        android:background="@drawable/custom_button"
         android:text="@string/report"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/coursesBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/coursesBtn"
+        android:textSize="12sp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ajudant_logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

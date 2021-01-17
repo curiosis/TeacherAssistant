@@ -32,13 +32,27 @@
 
     <!-- Marks array -->
     <string-array name="marks_array">
-        <item>Bdb</item>
-        <item>DbPlus</item>
-        <item>Db</item>
-        <item>DstPlus</item>
-        <item>Dst</item>
-        <item>Ndst</item>
+        <item>BardzoDobry</item>
+        <item>DobryPlus</item>
+        <item>Dobry</item>
+        <item>DostatecznyPlus</item>
+        <item>Dostateczny</item>
+        <item>Niedostateczny</item>
     </string-array>
 
+    <!-- Gender array -->
+    <string-array name="students_gender_array">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <!-- CRS/STS -->
+    <string name="crs">CRS</string>
+    <string name="sts">STS</string>
+    <string name="addToCRS">ADD TO COURSE</string>
+    <string name="avaCrs">Available courses</string>
+    <string name="avaSts">Available students</string>
+    <string name="addToCrs">ADD TO COURSE</string>
+    <string name="addStudents">Add Students</string>
 
 </resources>

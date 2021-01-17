@@ -10,4 +10,12 @@ class Converters {
 
     @TypeConverter
     fun fromShortMark(mark: MarkEnum?) : String = mark.toString()
+
+    @TypeConverter
+    fun toShortGender(value: String): GenderEnum = value?.let {
+        GenderEnum.valueOf(value)
+    }
+
+    @TypeConverter
+    fun fromShortGender(gender: GenderEnum?): String = gender.toString()
 }
