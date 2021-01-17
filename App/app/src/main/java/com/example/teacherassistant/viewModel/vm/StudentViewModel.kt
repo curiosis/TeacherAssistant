@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.teacherassistant.model.GenderEnum
 import com.example.teacherassistant.model.entities.Student
 import com.example.teacherassistant.model.projectDatabase
 import com.example.teacherassistant.model.repositories.StudentRepo
@@ -14,9 +15,9 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
     private val studentRepo: StudentRepo = StudentRepo((projectDatabase.getDatabase(application).studentDao()))
     val students: LiveData<List<Student>> = studentRepo.getAll
 
-    fun insert(name: String, surname: String){
+    fun insert(name: String, surname: String, gender: GenderEnum){
         viewModelScope.launch {
-            studentRepo.insert(Student(id=0, name = name, surname = surname))
+            studentRepo.insert(Student(id=0, name = name, surname = surname, gender = gender))
         }
     }
 
@@ -26,10 +27,10 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
         }
     }
 
-    fun edit(name: String, surname: String){
+    fun edit(name: String, surname: String, gender: GenderEnum){
         viewModelScope.launch {
             if(currentStudent != null)
-                studentRepo.edit(Student(id=currentStudent!!.id, name = name, surname = surname))
+                studentRepo.edit(Student(id=currentStudent!!.id, name = name, surname = surname, gender = gender))
         }
     }
 
