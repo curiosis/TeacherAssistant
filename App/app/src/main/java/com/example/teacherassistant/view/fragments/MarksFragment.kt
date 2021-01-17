@@ -62,6 +62,7 @@ class MarksFragment : Fragment() {
                 viewLifecycleOwner,{
                     myAdapter.notifyDataSetChanged()
                 })
+        markViewModel.setCurrentMark(null)
 
         return inflater.inflate(R.layout.mark_fragment_layout, container, false)
     }

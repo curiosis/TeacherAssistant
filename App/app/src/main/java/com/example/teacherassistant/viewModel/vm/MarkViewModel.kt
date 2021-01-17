@@ -10,7 +10,7 @@ import com.example.teacherassistant.model.repositories.MarkRepo
 import kotlinx.coroutines.launch
 
 class MarkViewModel(application: Application): AndroidViewModel(application) {
-    var currentMark :Mark? = null
+    var currentMark : Mark? = null
     private val database = projectDatabase.getDatabase(application)
     private val markRepo : MarkRepo = MarkRepo(database.markDao())
     val marksByToday: LiveData<List<Mark>> = markRepo.getAllMarksByToday
@@ -27,6 +27,12 @@ class MarkViewModel(application: Application): AndroidViewModel(application) {
         }
     }
 
+    fun deleteMark(mark: Mark){
+        viewModelScope.launch {
+            markRepo.delete(mark)
+        }
+    }
+
     fun editMark(studentCourseId: Int,
                  mark: MarkEnum,
                  note: String,
@@ -38,12 +44,6 @@ class MarkViewModel(application: Application): AndroidViewModel(application) {
                     id = currentMark!!.id, studentCourseId = studentCourseId,
                     mark = mark, note = note, date = date
                 ))
-        }
-    }
-
-    fun deleteMark(mark: Mark){
-        viewModelScope.launch {
-            markRepo.delete(mark)
         }
     }
 

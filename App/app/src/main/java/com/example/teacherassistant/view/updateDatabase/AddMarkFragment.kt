@@ -69,7 +69,6 @@ class AddMarkFragment : Fragment() {
                 activity?.onBackPressed()
             }
         }
-
         else{
             markBtn.setOnClickListener {
                 markViewModel.addMark(

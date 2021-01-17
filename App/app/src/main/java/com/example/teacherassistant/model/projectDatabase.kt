@@ -20,7 +20,7 @@ import com.example.teacherassistant.model.entities.StudentCourse
         Course::class,
         StudentCourse::class
         ],
-    version = 3,
+    version = 4,
     exportSchema = false)
 
 

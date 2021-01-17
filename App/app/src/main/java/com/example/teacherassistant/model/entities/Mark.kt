@@ -14,7 +14,7 @@ import com.example.teacherassistant.model.MarkEnum
 @TypeConverters(Converters::class)
 data class Mark(
     @PrimaryKey(autoGenerate = true)
-        val id: Int,
+    val id: Int,
     val studentCourseId: Int,
     val mark: MarkEnum,
     val note: String,
