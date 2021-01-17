@@ -22,7 +22,6 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="text"
         android:paddingStart="7dp"
@@ -30,15 +29,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/courseTV"
-        tools:ignore="LabelFor,RtlSymmetry" />
+        tools:ignore="LabelFor,RtlSymmetry"
+        android:background="#d5d7db" />
 
     <Button
         android:id="@+id/courseBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
+        android:layout_marginStart="160dp"
         android:layout_marginTop="220dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginEnd="160dp"
         android:text="@string/addCourse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

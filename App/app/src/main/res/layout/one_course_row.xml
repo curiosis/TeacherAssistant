@@ -9,33 +9,42 @@
     <TextView
         android:id="@+id/crsNameTV"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2" />
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/crsStudentsBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
         android:backgroundTint="#ccc0c0"
-        tools:ignore="ButtonStyle" />
+        android:textSize="12sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"
+        android:text="@string/sts"/>
 
     <Button
         android:id="@+id/crsEdit"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:backgroundTint="#4287f5"
         android:text="@string/edit"
-        tools:ignore="ButtonStyle" />
+        android:textSize="12sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"/>
 
     <Button
         android:id="@+id/crsDel"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
         android:backgroundTint="#d44a4a"
         android:text="@string/delete"
-        tools:ignore="ButtonStyle" />
+        android:textSize="12sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"/>
 
 </LinearLayout>
