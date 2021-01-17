@@ -32,9 +32,11 @@ class StudentListAdapter(
         val stCourses = holder.view.findViewById<Button>(R.id.stCoursesBtn)
         val studentSurname = holder.view.findViewById<TextView>(R.id.stSurnameTV)
         val studentName = holder.view.findViewById<TextView>(R.id.stNameTV)
+        val studentGender = holder.view.findViewById<TextView>(R.id.stGenderTV)
 
         studentSurname.text = students.value?.get(position)?.surname
         studentName.text = students.value?.get(position)?.name
+        studentGender.text = students.value?.get(position)?.gender?.value.toString()
 
         editButton.setOnClickListener {
             view->view.findNavController().navigate(

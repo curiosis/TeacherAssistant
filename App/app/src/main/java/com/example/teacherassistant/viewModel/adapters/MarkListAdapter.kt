@@ -30,15 +30,17 @@ class MarkListAdapter(
         val markTV = holder.view.findViewById<TextView>(R.id.markTView)
         val noteTV = holder.view.findViewById<TextView>(R.id.noteTView)
 
-        markTV.text = marks?.value?.get(position)?.mark.toString()
+        markTV.text = marks?.value?.get(position)?.mark?.value.toString()
         noteTV.text = marks?.value?.get(position)?.note
 
         val editButton = holder.view.findViewById<Button>(R.id.editButton)
         editButton.setOnClickListener {
             view->view.findNavController().navigate(R.id.action_marksFragment_to_addMarkFragment)
             val thisMark = marks?.value?.get(position)
-            if(thisMark != null)
+            if(thisMark != null){
                 currentMarkCh(thisMark)
+            }
+
         }
 
         val delButton = holder.view.findViewById<Button>(R.id.deleteButton)
