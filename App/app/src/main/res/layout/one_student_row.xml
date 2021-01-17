@@ -2,29 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
 
     <TextView
         android:id="@+id/stSurnameTV"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1.65"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/stNameTV"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1.65"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/stGenderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/stCoursesBtn"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_weight="1.1"
         android:backgroundTint="#ccc0c0"
-        tools:ignore="ButtonStyle" />
+        android:text="@string/crs"
+        android:textSize="11sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"/>
 
     <Button
         android:id="@+id/stEdit"
@@ -33,14 +47,19 @@
         android:layout_weight="1.2"
         android:backgroundTint="#4287f5"
         android:text="@string/edit"
-        tools:ignore="ButtonStyle" />
+        android:textSize="11sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"/>
 
     <Button
         android:id="@+id/stDel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight="1.1"
         android:backgroundTint="#d44a4a"
         android:text="@string/delete"
-        tools:ignore="ButtonStyle" />
+        android:textSize="11sp"
+        tools:ignore="ButtonStyle,SmallSp"
+        android:includeFontPadding="false"/>
+
 </LinearLayout>
