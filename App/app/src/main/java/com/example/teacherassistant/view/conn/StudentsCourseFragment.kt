@@ -76,6 +76,8 @@ class StudentsCourseFragment : Fragment() {
             this.adapter = myAdapter
         }
 
+        currCrsNameStTV.text = courseViewModel.currentCourse!!.name
+
         AddStsCrsBtn.setOnClickListener {
             view.findNavController().navigate(
                     R.id.action_studentsCourseFragment_to_addSCFragment
