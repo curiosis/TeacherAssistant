@@ -6,29 +6,33 @@
     <TextView
         android:id="@+id/studentSurnameTv"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1.5"
-        android:textColor="#000000" />
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/studentNameTv"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_weight="1.5"
-        android:textColor="#000000" />
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/courseTv"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:textColor="#000000" />
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/markTv"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:textColor="#000000" />
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:textStyle="bold"/>
 
 </LinearLayout>

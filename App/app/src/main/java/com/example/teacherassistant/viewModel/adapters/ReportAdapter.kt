@@ -59,7 +59,7 @@ class ReportAdapter(
         courseTView.text = currentCourse?.name
         studentSurnameTView.text = currentStudent?.surname
         studentNameTView.text = currentStudent?.name
-        markTView.text = marks?.value?.get(position)?.mark.toString()
+        markTView.text = marks?.value?.get(position)?.mark?.value.toString()
     }
 
     override fun getItemCount(): Int = marks?.value?.size ?: 0

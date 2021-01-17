@@ -84,7 +84,7 @@ class ReportFragment : Fragment() {
             this.adapter = myAdapter
         }
 
-        reportTView.text = "Report of the day: " + SimpleDateFormat("dd-MM-yyyy").format(Date())
+        reportTView.text = "Report of the day:\n" + SimpleDateFormat("dd-MM-yyyy").format(Date())
     }
 
     companion object {
